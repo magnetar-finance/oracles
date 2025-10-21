@@ -9,7 +9,8 @@
     "clean": "rm -rf artifacts",
     "compile": "hardhat compile",
     "build": "pnpm run clean && pnpm run compile",
-    "deploy:core": "hardhat run scripts/DeployCore.ts"
+    "deploy:core": "hardhat run scripts/DeployCore.ts",
+    "extract-abis": "hardhat run scripts/ExtractABIs.ts"
   },
   "keywords": [],
   "author": "",
