@@ -6,7 +6,7 @@ import './interfaces/ICLPoolConstants.sol';
 import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
-contract SeloraV3PriceSource is PriceSource {
+contract MagnetarV3PriceSource is PriceSource {
     ICLFactory public immutable factory;
 
     constructor(
@@ -14,7 +14,7 @@ contract SeloraV3PriceSource is PriceSource {
         address _usdt,
         address _usdc,
         address _weth
-    ) PriceSource('Selora Finance V3', _usdt, _usdc, _weth) {
+    ) PriceSource('Magnetar Finance V3', _usdt, _usdc, _weth) {
         factory = _factory;
     }
 

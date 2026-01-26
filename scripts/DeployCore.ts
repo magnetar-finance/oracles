@@ -4,7 +4,7 @@ import { deploy } from './helpers';
 import { createWriteStream, existsSync, mkdirSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
-import { Oracle, SeloraV2PriceSource, SeloraV3PriceSource } from '../artifacts/types';
+import { Oracle, MagnetarV2PriceSource, MagnetarV3PriceSource } from '../artifacts/types';
 
 interface CoreOutput {
   oracle: string;
@@ -17,8 +17,8 @@ async function main() {
   // Constants
   const CONSTANTS = Values[networkId as unknown as keyof typeof Values];
   // Deploy V2 price source
-  const v2PriceSource = await deploy<SeloraV2PriceSource>(
-    'SeloraV2PriceSource',
+  const v2PriceSource = await deploy<MagnetarV2PriceSource>(
+    'MagnetarV2PriceSource',
     undefined,
     CONSTANTS.v2Factory,
     CONSTANTS.USDT,
@@ -26,8 +26,8 @@ async function main() {
     CONSTANTS.WETH,
   );
   // Deploy CL price source
-  const clPriceSource = await deploy<SeloraV3PriceSource>(
-    'SeloraV3PriceSource',
+  const clPriceSource = await deploy<MagnetarV3PriceSource>(
+    'MagnetarV3PriceSource',
     undefined,
     CONSTANTS.clFactory,
     CONSTANTS.USDT,
