@@ -32,8 +32,8 @@ const config: HardhatUserConfig = {
       gas: 'auto',
       gasMultiplier: 1,
     },
-    seismicDevnet: {
-      url: 'https://node-2.seismicdev.net/rpc',
+    seismicTestnet: {
+      url: 'https://gcp-2.seismictest.net/rpc',
       chainId: 5124,
       accounts: [process.env.PRIVATE_KEY as string],
       gasPrice: 'auto',
