@@ -56,6 +56,14 @@ const config: HardhatUserConfig = {
       gas: 'auto',
       gasMultiplier: 1,
     },
+    arcTestnet: {
+      url: 'https://rpc.testnet.arc.network',
+      chainId: 5042002,
+      accounts: [process.env.PRIVATE_KEY as string],
+      gasPrice: 'auto',
+      gas: 'auto',
+      gasMultiplier: 1,
+    },
   },
   typechain: {
     target: 'ethers-v5',
