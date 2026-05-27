@@ -64,6 +64,14 @@ const config: HardhatUserConfig = {
       gas: 'auto',
       gasMultiplier: 1,
     },
+    litVMTestnet: {
+      url: 'https://liteforge.rpc.caldera.xyz/http',
+      chainId: 4441,
+      accounts: [process.env.PRIVATE_KEY as string],
+      gasPrice: 'auto',
+      gas: 'auto',
+      gasMultiplier: 1,
+    },
   },
   typechain: {
     target: 'ethers-v5',
